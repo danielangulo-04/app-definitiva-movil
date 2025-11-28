@@ -17,7 +17,7 @@ import { Link } from "expo-router";
 export default function HomeScreen() {
   return (
     <ParallaxScrollView
-      headerBackgroundColor={{ light: "#2960b9ff", dark: "#182536ff" }}
+      headerBackgroundColor={{ light: "#3265b8ff", dark: "#182536ff" }}
       headerImage={
         <Image
           source={require("@/assets/images/logo-finanzate-sin-fondo.png")}
@@ -72,7 +72,7 @@ export default function HomeScreen() {
       </ThemedText>
       <ThemedView style={styles.stepContainer}>
         <ThemedText type="defaultSemiBold" style={styles.txtcenter}>¡No importa tu nivel de experiencia. 
-          Finánzate te acompaña en cada paso.!</ThemedText>
+          Finánzate te acompaña en cada paso hacia el exito financiero.!</ThemedText>
       </ThemedView>
         <ThemedText type="title" style={styles.formLink2}>• Conoce algunos de nuestros consejos •</ThemedText>
               <TouchableOpacity
@@ -111,15 +111,15 @@ export default function HomeScreen() {
 
 
       <ThemedView style={styles.titleContainer}>
-        <ThemedText type="title">Welcome!</ThemedText>
+        <ThemedText type="title">Bienvenidos!</ThemedText>
         <HelloWave />
       </ThemedView>
       <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 1: Try it</ThemedText>
+        <ThemedText type="subtitle">Step 1: Aprende los fundamentos </ThemedText>
         <ThemedText>
-          Edit{" "}
-          <ThemedText type="defaultSemiBold">app/(tabs)/index.tsx</ThemedText>{" "}
-          to see changes. Press{" "}
+          Descubre los conceptos{" "}
+          <ThemedText type="defaultSemiBold">basicos/(para)/mejorar tu vida</ThemedText>{" "}
+          financiera. explora como gastar{" "}
           <ThemedText type="defaultSemiBold">
             {Platform.select({
               ios: "cmd + d",
@@ -127,13 +127,13 @@ export default function HomeScreen() {
               web: "F12",
             })}
           </ThemedText>{" "}
-          to open developer tools.
+          ahorra e invierte de manera inteligente.
         </ThemedText>
       </ThemedView>
       <ThemedView style={styles.stepContainer}>
         <Link href="/modal">
           <Link.Trigger>
-            <ThemedText type="subtitle">Step 2: Explore</ThemedText>
+            <ThemedText type="subtitle">Step 2: Personaliza tus objetivos</ThemedText>
           </Link.Trigger>
           <Link.Preview />
           <Link.Menu>
@@ -159,20 +159,20 @@ export default function HomeScreen() {
         </Link>
 
         <ThemedText>
-          {`Tap the Explore tab to learn more about what's included in this starter app.`}
+          {`configura tus metas financieras segun tus habitos y prioridades , define tambien cuanto quieres ahorrar , como lo deseas invertir y que quieres lograr `}
         </ThemedText>
       </ThemedView>
       <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 3: Get a fresh start</ThemedText>
+        <ThemedText type="subtitle">Step 3: Pon tu plan en accion </ThemedText>
         <ThemedText>
-          {`When you're ready, run `}
+          {`Comienza a aplicar los`}
           <ThemedText type="defaultSemiBold">
-            npm run reset-project
+            concejos diariamente
           </ThemedText>{" "}
-          to get a fresh <ThemedText type="defaultSemiBold">app</ThemedText>{" "}
-          directory. This will move the current{" "}
-          <ThemedText type="defaultSemiBold">app</ThemedText> to{" "}
-          <ThemedText type="defaultSemiBold">app-example</ThemedText>.
+          haz seguimiento a tu prgreso desde la  <ThemedText type="defaultSemiBold">App</ThemedText>{" "}
+          y ajusta tu {" "}
+          <ThemedText type="defaultSemiBold">estrategia </ThemedText> cuando sea{" "}
+          <ThemedText type="defaultSemiBold">necesitada</ThemedText>.
         </ThemedText>
       </ThemedView>
     </ParallaxScrollView>
@@ -216,8 +216,8 @@ const styles = StyleSheet.create({
     paddingVertical: 10,
     paddingHorizontal: 20,
     borderWidth: 1,
-    backgroundColor: "#084cbaff",
-    borderColor: "#075eec",
+    backgroundColor: "#3165b8ff",
+    borderColor: "#3168c0ff",
   },
   btnText: {
     fontSize: 18,
