@@ -10,7 +10,10 @@ import { Link } from "expo-router";
 export default function HomeScreen() {
   return (
     <ParallaxScrollView
+
+      headerBackgroundColor={{ light: "#3265b8ff", dark: "#182536ff" }}
       headerBackgroundColor={{ light: "#82a7deff", dark: "#182536ff" }}
+
       headerImage={
         <Image
           source={require("@/assets/images/logo-finanzate-sin-fondo.png")}
@@ -61,7 +64,13 @@ export default function HomeScreen() {
         NUESTROS BENEFICIOS{" "}
       </ThemedText>
 
-      <View>
+      <ThemedView style={styles.stepContainer}>
+        <ThemedText type="defaultSemiBold" style={styles.txtcenter}>¡No importa tu nivel de experiencia. 
+          Finánzate te acompaña en cada paso hacia el exito financiero.!</ThemedText>
+      </ThemedView>
+        <ThemedText type="title" style={styles.formLink2}>• Conoce algunos de nuestros consejos •</ThemedText>
+              <TouchableOpacity
+       <View>
         <Image
           alt="imagen de logo finánzate"
           resizeMode="contain"
@@ -70,6 +79,7 @@ export default function HomeScreen() {
         />
       </View>
       <TouchableOpacity
+
         onPress={() => {
           alert(
             "Programa un ahorro automático de entre el 10% y 20% del ingreso mensual apenas recibas tu salario. Esto evita tentaciones y crea disciplina financiera."
@@ -121,10 +131,37 @@ export default function HomeScreen() {
         </View>
       </TouchableOpacity>
 
+
+
+
+
+
+
+
+
+      <ThemedView style={styles.titleContainer}>
+        <ThemedText type="title">Bienvenidos!</ThemedText>
+        <HelloWave />
+      </ThemedView>
       <ThemedView style={styles.stepContainer}>
+        <ThemedText type="subtitle">Step 1: Aprende los fundamentos </ThemedText>
+        <ThemedText>
+          Descubre los conceptos{" "}
+          <ThemedText type="defaultSemiBold">basicos/(para)/mejorar tu vida</ThemedText>{" "}
+          financiera. explora como gastar{" "}
+          <ThemedText type="defaultSemiBold">
+            {Platform.select({
+              ios: "cmd + d",
+              android: "cmd + m",
+              web: "F12",
+            })}
+          </ThemedText>{" "}
+          ahorra e invierte de manera inteligente.
+        <ThemedView style={styles.stepContainer}>
         <ThemedText type="defaultSemiBold" style={styles.txtcenter}>
           ¡No importa tu nivel de experiencia. Finánzate te acompaña en cada
           paso.!
+
         </ThemedText>
       </ThemedView>
       <ThemedText type="title" style={styles.formLink2}>
@@ -135,9 +172,12 @@ export default function HomeScreen() {
       <ThemedView style={styles.stepContainer}>
         <Link href="/invertir">
           <Link.Trigger>
-            <View style={styles.btn2}>
+
+            <ThemedText type="subtitle">Step 2: Personaliza tus objetivos</ThemedText>
+                   <View style={styles.btn2}>
               <Text style={styles.btnText}>💲 Te interesa invertir?</Text>
             </View>
+
           </Link.Trigger>
           <Link.Preview />
           <Link.Menu>
@@ -163,7 +203,11 @@ export default function HomeScreen() {
         </Link>
       </ThemedView>
 
-      <ThemedView style={styles.stepContainer}>
+
+        <ThemedText>
+          {`configura tus metas financieras segun tus habitos y prioridades , define tambien cuanto quieres ahorrar , como lo deseas invertir y que quieres lograr `}
+        </ThemedText>
+           <ThemedView style={styles.stepContainer}>
         <Link href="/acciones">
           <Link.Trigger>
             <View style={styles.btn2}>
@@ -192,6 +236,7 @@ export default function HomeScreen() {
             </Link.Menu>
           </Link.Menu>
         </Link>
+
       </ThemedView>
 
       <View>
@@ -203,8 +248,20 @@ export default function HomeScreen() {
         />
       </View>
       <ThemedView style={styles.stepContainer}>
-        <ThemedText type="defaultSemiBold" style={styles.txtcenter}>
+
+        <ThemedText type="subtitle">Step 3: Pon tu plan en accion </ThemedText>
+        <ThemedText>
+          {`Comienza a aplicar los`}
+          <ThemedText type="defaultSemiBold">
+            concejos diariamente
+          </ThemedText>{" "}
+          haz seguimiento a tu prgreso desde la  <ThemedText type="defaultSemiBold">App</ThemedText>{" "}
+          y ajusta tu {" "}
+          <ThemedText type="defaultSemiBold">estrategia </ThemedText> cuando sea{" "}
+          <ThemedText type="defaultSemiBold">necesitada</ThemedText>.
+          <ThemedText type="defaultSemiBold" style={styles.txtcenter}>
           El futuro esta con finanzate.
+
         </ThemedText>
       </ThemedView>
     </ParallaxScrollView>
@@ -248,8 +305,8 @@ const styles = StyleSheet.create({
     paddingVertical: 10,
     paddingHorizontal: 20,
     borderWidth: 1,
-    backgroundColor: "#084cbaff",
-    borderColor: "#075eec",
+    backgroundColor: "#3165b8ff",
+    borderColor: "#3168c0ff",
   },
   btn2: {
     flexDirection: "row",
