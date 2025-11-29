@@ -1,10 +1,9 @@
 import { Image } from "expo-image";
 import {
-  Platform,
   StyleSheet,
   Text,
   TouchableOpacity,
-  View,
+  View
 } from "react-native";
 
 import { HelloWave } from "@/components/hello-wave";
@@ -29,31 +28,31 @@ export default function HomeScreen() {
         NUESTROS BENEFICIOS{" "}
       </ThemedText>
 
-            <View >
-                <Image 
-            alt="imagen de logo finánzate"
-            resizeMode="contain"
-            source={require("@/assets/images/ahorra.png")}
-            style={styles.headerImg}
-            
-          />
-          </View>
-                <View>
-                <Image
-            alt="imagen de logo finánzate"
-            resizeMode="contain"
-            source={require("@/assets/images/gasta.png")}
-            style={styles.headerImg}
-          />
-          </View>
-                <View>
-                <Image
-            alt="imagen de logo finánzate"
-            resizeMode="contain"
-            source={require("@/assets/images/invierte.png")}
-            style={styles.headerImg}
-          />
-          </View>
+      <View >
+        <Image
+          alt="imagen de logo finánzate"
+          resizeMode="contain"
+          source={require("@/assets/images/ahorra.png")}
+          style={styles.headerImg}
+
+        />
+      </View>
+      <View>
+        <Image
+          alt="imagen de logo finánzate"
+          resizeMode="contain"
+          source={require("@/assets/images/gasta.png")}
+          style={styles.headerImg}
+        />
+      </View>
+      <View>
+        <Image
+          alt="imagen de logo finánzate"
+          resizeMode="contain"
+          source={require("@/assets/images/invierte.png")}
+          style={styles.headerImg}
+        />
+      </View>
 
 
       <Collapsible title="Ahorra mas facil que nunca:">
@@ -71,11 +70,11 @@ export default function HomeScreen() {
         DA EL PRIMER PASO HACIA TU LIBERTAD FINANCIERA{" "}
       </ThemedText>
       <ThemedView style={styles.stepContainer}>
-        <ThemedText type="defaultSemiBold" style={styles.txtcenter}>¡No importa tu nivel de experiencia. 
+        <ThemedText type="defaultSemiBold" style={styles.txtcenter}>¡No importa tu nivel de experiencia.
           Finánzate te acompaña en cada paso.!</ThemedText>
       </ThemedView>
-        <ThemedText type="title" style={styles.formLink2}>• Conoce algunos de nuestros consejos •</ThemedText>
-              <TouchableOpacity
+      <ThemedText type="title" style={styles.formLink2}>• Conoce algunos de nuestros consejos •</ThemedText>
+      <TouchableOpacity
         onPress={() => {
           alert("Crea un plan de gastos mensual basado en tus ingresos y obligaciones. Antes de comprar algo, aplica la regla de las 24 horas: si después de ese tiempo sigue siendo importante, cómpralo; si no, evita el gasto.");
         }}
@@ -84,7 +83,7 @@ export default function HomeScreen() {
           <Text style={styles.btnText}>“Gasta con estrategia”</Text>
         </View>
       </TouchableOpacity>
-            <TouchableOpacity
+      <TouchableOpacity
         onPress={() => {
           alert("Programa un ahorro automático de entre el 10% y 20% del ingreso mensual apenas recibas tu salario. Esto evita tentaciones y crea disciplina financiera.");
         }}
@@ -111,29 +110,25 @@ export default function HomeScreen() {
 
 
       <ThemedView style={styles.titleContainer}>
-        <ThemedText type="title">Welcome!</ThemedText>
+        <ThemedText type="title">Bienvenidos a nuestra App-Movil</ThemedText>
         <HelloWave />
       </ThemedView>
       <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 1: Try it</ThemedText>
+        <ThemedText type="subtitle">Paso 1: Descarga nuestra App desde tu tienda de aplicaciones</ThemedText>
         <ThemedText>
           Edit{" "}
-          <ThemedText type="defaultSemiBold">app/(tabs)/index.tsx</ThemedText>{" "}
-          to see changes. Press{" "}
+          <ThemedText type="defaultSemiBold">Es totalmente gratis con una subscripcion mesual de 20 Dollares.</ThemedText>{" "}
+          {" "}
           <ThemedText type="defaultSemiBold">
-            {Platform.select({
-              ios: "cmd + d",
-              android: "cmd + m",
-              web: "F12",
-            })}
+
           </ThemedText>{" "}
-          to open developer tools.
+
         </ThemedText>
       </ThemedView>
       <ThemedView style={styles.stepContainer}>
         <Link href="/modal">
           <Link.Trigger>
-            <ThemedText type="subtitle">Step 2: Explore</ThemedText>
+            <ThemedText type="subtitle">Paso 2: Expora nuestra App y conoce todos sus beneficios</ThemedText>
           </Link.Trigger>
           <Link.Preview />
           <Link.Menu>
@@ -159,20 +154,20 @@ export default function HomeScreen() {
         </Link>
 
         <ThemedText>
-          {`Tap the Explore tab to learn more about what's included in this starter app.`}
+          Sumgerte en un la informacion que tenemos para ti, nunca olvides que saber invertir es saber administrar tu futuro.
         </ThemedText>
       </ThemedView>
       <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 3: Get a fresh start</ThemedText>
+        <ThemedText type="subtitle">Paso 3: Pon en practica todo lo aprendido </ThemedText>
         <ThemedText>
-          {`When you're ready, run `}
+
           <ThemedText type="defaultSemiBold">
-            npm run reset-project
+
           </ThemedText>{" "}
-          to get a fresh <ThemedText type="defaultSemiBold">app</ThemedText>{" "}
-          directory. This will move the current{" "}
-          <ThemedText type="defaultSemiBold">app</ThemedText> to{" "}
-          <ThemedText type="defaultSemiBold">app-example</ThemedText>.
+          <ThemedText type="defaultSemiBold"></ThemedText>{" "}
+          Recuerda practicar todo lo visto en la App, no te quedes solo en la teoria, sal al mundo e intentalo mil veces mas hasta sentirte comodo con tu progreso.
+          <ThemedText type="defaultSemiBold"></ThemedText> {" "}
+          <ThemedText type="defaultSemiBold"></ThemedText>.
         </ThemedText>
       </ThemedView>
     </ParallaxScrollView>
@@ -202,12 +197,12 @@ const styles = StyleSheet.create({
     color: "#084cbaff",
     textAlign: "center",
   },
-    formLink2: {
+  formLink2: {
     fontSize: 19,
     fontWeight: "600",
     color: "#084cbaff",
     textAlign: "center",
-    },
+  },
   btn: {
     flexDirection: "row",
     alignItems: "center",
@@ -228,7 +223,7 @@ const styles = StyleSheet.create({
   txtcenter: {
     textAlign: "center",
   },
-    headerImg: {
+  headerImg: {
     width: 380,
     height: 150,
     alignSelf: "center",
